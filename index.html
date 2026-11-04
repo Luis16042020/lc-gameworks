@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1424">
+
+  <title>LC GameWorks | Não Exploda!</title>
+  <meta name="description"
+        content="Conheça Não Exploda!, um jogo de reflexos e desafios rápidos da LC GameWorks. Disponível na Google Play.">
+
+  <style>
+    :root {
+      --bg: #0c1424;
+      --card: #17243a;
+      --yellow: #ffcb43;
+      --orange: #ff841f;
+      --white: #f6f8ff;
+      --muted: #aebbd0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(
+          ellipse at 50% 15%,
+          #263d5c 0%,
+          var(--bg) 65%
+        );
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(100% - 32px, 950px);
+      margin: auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0;
+      border-bottom: 1px solid #33425a;
+    }
+
+    .brand {
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: 21px;
+    }
+
+    .tag {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted);
+    }
+
+    main { padding: 45px 0 30px; }
+
+    .hero {
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(40px, 9vw, 74px);
+      margin: 15px 0;
+      line-height: 1;
+      text-shadow: 0 5px 0 #70330e;
+    }
+
+    h1 span { color: var(--yellow); }
+
+    .subtitle {
+      font-size: clamp(17px, 4vw, 23px);
+      font-weight: bold;
+      color: var(--yellow);
+    }
+
+    .description {
+      max-width: 580px;
+      margin: 18px auto 25px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .game-image {
+      display: block;
+      width: min(100%, 480px);
+      max-height: 390px;
+      object-fit: contain;
+      margin: 25px auto;
+      border-radius: 20px;
+      filter: drop-shadow(
+        0 15px 35px rgba(255, 134, 31, .22)
+      );
+    }
+
+    .actions {
+      width: min(100%, 390px);
+      margin: auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    .button {
+      width: 100%;
+      display: block;
+      padding: 17px 20px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .primary {
+      background: linear-gradient(
+        135deg, var(--yellow), var(--orange)
+      );
+      color: #171717;
+      box-shadow: 0 6px 0 #9a490d;
+    }
+
+    .secondary {
+      color: var(--white);
+      background: #26354e;
+      border: 1px solid #50617a;
+    }
+
+    .button:hover { filter: brightness(1.08); }
+
+    .help {
+      max-width: 390px;
+      margin: 18px auto;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .copy-status {
+      text-align: center;
+      min-height: 18px;
+      font-size: 13px;
+      color: var(--yellow);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 55px 0 25px;
+    }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid #33435c;
+      border-radius: 17px;
+      padding: 22px 15px;
+      text-align: center;
+    }
+
+    .feature .emoji { font-size: 30px; }
+
+    .feature h3 {
+      margin: 12px 0 8px;
+      color: var(--yellow);
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #33425a;
+      padding: 25px 0 35px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 20px 0; }
+      .brand { font-size: 17px; }
+      .tag { font-size: 9px; }
+      main { padding-top: 35px; }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 40px;
+      }
+
+      .feature { padding: 17px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="brand">⚡ LC GameWorks</div>
+      <div class="tag">ESTÚDIO INDIE 🇧🇷</div>
+    </header>
+
+    <main>
+      <section class="hero">
+
+        <div class="eyebrow">
+          💥 Já disponível para Android
+        </div>
+
+        <h1>NÃO <span>EXPLODA!</span></h1>
+
+        <div class="subtitle">
+          Você consegue vencer o cronômetro?
+        </div>
+
+        <p class="description">
+          Mantenha a calma, pense rápido e desarme a bomba
+          antes que o tempo acabe! Corte fios, aperte botões
+          e siga as instruções para superar seu recorde.
+        </p>
+
+        <!-- Coloque a imagem capa.png no repositório -->
+        <img
+          class="game-image"
+          src="capa.png"
+          alt="Imagem oficial do jogo Não Exploda!"
+        >
+
+        <div class="actions">
+
+          <a
+            class="button primary"
+            id="buyButton"
+            href="https://play.google.com/store/apps/details?id=com.lcgameworks.naoexploda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎮 COMPRAR NA GOOGLE PLAY
+          </a>
+
+          <a
+            class="button secondary"
+            id="browserButton"
+            href="https://play.google.com/store/apps/details?id=com.lcgameworks.naoexploda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🌐 Abrir página da loja
+          </a>
+
+          <button
+            class="button secondary"
+            id="copyButton"
+            type="button"
+          >
+            📋 Copiar link do jogo
+          </button>
+
+          <div
+            class="copy-status"
+            id="copyStatus"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+        </div>
+
+        <p class="help">
+          Não conseguiu abrir a Play Store pelo Instagram?
+          Copie o link acima, abra o Chrome e cole
+          o endereço para acessar o jogo.
+        </p>
+
+      </section>
+
+      <section class="features">
+
+        <div class="feature">
+          <div class="emoji">⏱️</div>
+          <h3>Desafios rápidos</h3>
+          <p>
+            Pense e reaja antes que o tempo se esgote.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="emoji">💣</div>
+          <h3>Desarme bombas</h3>
+          <p>
+            Corte fios, aperte botões e siga instruções.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="emoji">🏆</div>
+          <h3>Bata seu recorde</h3>
+          <p>
+            A dificuldade aumenta conforme você avança.
+          </p>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>© LC GameWorks — Jogos independentes</p>
+      <a
+        href="https://www.instagram.com/lc_gameworks/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📸 Siga no Instagram
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    const playStoreUrl =
+      "https://play.google.com/store/apps/details?id=com.lcgameworks.naoexploda";
+
+    document.getElementById("copyButton")
+      .addEventListener("click", async () => {
+        const status =
+          document.getElementById("copyStatus");
+
+        try {
+          await navigator.clipboard.writeText(playStoreUrl);
+          status.textContent =
+            "✅ Link copiado! Abra no Chrome para acessar.";
+        } catch (error) {
+          status.textContent =
+            "Não foi possível copiar automaticamente. " +
+            "Copie o endereço abaixo.";
+
+          const link = document.createElement("a");
+          link.href = playStoreUrl;
+          link.textContent = playStoreUrl;
+          link.style.color = "#ffcb43";
+          link.style.overflowWrap = "anywhere";
+          status.appendChild(
+            document.createElement("br")
+          );
+          status.appendChild(link);
+        }
+      });
+  </script>
+</body>
+</html>
