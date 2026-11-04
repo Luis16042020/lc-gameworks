@@ -8,8 +8,11 @@
   <meta name="theme-color" content="#0c1424">
 
   <title>LC GameWorks | Não Exploda!</title>
-  <meta name="description"
-        content="Conheça Não Exploda!, um jogo de reflexos e desafios rápidos da LC GameWorks. Disponível na Google Play.">
+
+  <meta
+    name="description"
+    content="Conheça Não Exploda!, um jogo de reflexos e desafios rápidos da LC GameWorks. Disponível na Google Play."
+  >
 
   <style>
     :root {
@@ -21,15 +24,17 @@
       --muted: #aebbd0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       background: radial-gradient(
-          ellipse at 50% 15%,
-          #263d5c 0%,
-          var(--bg) 65%
-        );
+        ellipse at 50% 15%,
+        #263d5c 0%,
+        var(--bg) 65%
+      );
       color: var(--white);
       font-family: Arial, Helvetica, sans-serif;
       min-height: 100vh;
@@ -60,7 +65,9 @@
       color: var(--muted);
     }
 
-    main { padding: 45px 0 30px; }
+    main {
+      padding: 45px 0 30px;
+    }
 
     .hero {
       text-align: center;
@@ -81,7 +88,9 @@
       text-shadow: 0 5px 0 #70330e;
     }
 
-    h1 span { color: var(--yellow); }
+    h1 span {
+      color: var(--yellow);
+    }
 
     .subtitle {
       font-size: clamp(17px, 4vw, 23px);
@@ -128,38 +137,32 @@
       cursor: pointer;
       border: none;
       font-family: inherit;
+      transition: transform 0.2s ease,
+                  filter 0.2s ease;
     }
 
     .primary {
       background: linear-gradient(
-        135deg, var(--yellow), var(--orange)
+        135deg,
+        var(--yellow),
+        var(--orange)
       );
       color: #171717;
       box-shadow: 0 6px 0 #9a490d;
     }
 
-    .secondary {
-      color: var(--white);
-      background: #26354e;
-      border: 1px solid #50617a;
+    .button:hover {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
     }
 
-    .button:hover { filter: brightness(1.08); }
-
-    .help {
-      max-width: 390px;
-      margin: 18px auto;
-      text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
+    .button:active {
+      transform: translateY(2px);
     }
 
-    .copy-status {
-      text-align: center;
-      min-height: 18px;
-      font-size: 13px;
-      color: var(--yellow);
+    .button:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 4px;
     }
 
     .features {
@@ -177,7 +180,9 @@
       text-align: center;
     }
 
-    .feature .emoji { font-size: 30px; }
+    .feature .emoji {
+      font-size: 30px;
+    }
 
     .feature h3 {
       margin: 12px 0 8px;
@@ -205,10 +210,21 @@
     }
 
     @media (max-width: 600px) {
-      header { padding: 20px 0; }
-      .brand { font-size: 17px; }
-      .tag { font-size: 9px; }
-      main { padding-top: 35px; }
+      header {
+        padding: 20px 0;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .tag {
+        font-size: 9px;
+      }
+
+      main {
+        padding-top: 35px;
+      }
 
       .features {
         grid-template-columns: 1fr;
@@ -216,7 +232,9 @@
         margin-top: 40px;
       }
 
-      .feature { padding: 17px; }
+      .feature {
+        padding: 17px;
+      }
     }
   </style>
 </head>
@@ -224,19 +242,29 @@
 <body>
   <div class="container">
 
+    <!-- CABEÇALHO -->
     <header>
-      <div class="brand">⚡ LC GameWorks</div>
-      <div class="tag">ESTÚDIO INDIE 🇧🇷</div>
+      <div class="brand">
+        ⚡ LC GameWorks
+      </div>
+
+      <div class="tag">
+        ESTÚDIO INDIE 🇧🇷
+      </div>
     </header>
 
     <main>
+
+      <!-- APRESENTAÇÃO DO JOGO -->
       <section class="hero">
 
         <div class="eyebrow">
           💥 Já disponível para Android
         </div>
 
-        <h1>NÃO <span>EXPLODA!</span></h1>
+        <h1>
+          NÃO <span>EXPLODA!</span>
+        </h1>
 
         <div class="subtitle">
           Você consegue vencer o cronômetro?
@@ -248,65 +276,37 @@
           e siga as instruções para superar seu recorde.
         </p>
 
-        <!-- Coloque a imagem capa.png no repositório -->
+        <!-- IMAGEM OFICIAL DO JOGO -->
         <img
           class="game-image"
           src="capa.png"
           alt="Imagem oficial do jogo Não Exploda!"
         >
 
+        <!-- BOTÃO GOOGLE PLAY -->
         <div class="actions">
 
           <a
             class="button primary"
-            id="buyButton"
             href="https://play.google.com/store/apps/details?id=com.lcgameworks.naoexploda"
             target="_blank"
             rel="noopener noreferrer"
           >
-            🎮 COMPRAR NA GOOGLE PLAY
+            🎮 Abrir PlayStore
           </a>
-
-          <a
-            class="button secondary"
-            id="browserButton"
-            href="https://play.google.com/store/apps/details?id=com.lcgameworks.naoexploda"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🌐 Abrir página da loja
-          </a>
-
-          <button
-            class="button secondary"
-            id="copyButton"
-            type="button"
-          >
-            📋 Copiar link do jogo
-          </button>
-
-          <div
-            class="copy-status"
-            id="copyStatus"
-            role="status"
-            aria-live="polite"
-          ></div>
 
         </div>
 
-        <p class="help">
-          Não conseguiu abrir a Play Store pelo Instagram?
-          Copie o link acima, abra o Chrome e cole
-          o endereço para acessar o jogo.
-        </p>
-
       </section>
 
+      <!-- CARACTERÍSTICAS DO JOGO -->
       <section class="features">
 
         <div class="feature">
           <div class="emoji">⏱️</div>
+
           <h3>Desafios rápidos</h3>
+
           <p>
             Pense e reaja antes que o tempo se esgote.
           </p>
@@ -314,7 +314,9 @@
 
         <div class="feature">
           <div class="emoji">💣</div>
+
           <h3>Desarme bombas</h3>
+
           <p>
             Corte fios, aperte botões e siga instruções.
           </p>
@@ -322,17 +324,25 @@
 
         <div class="feature">
           <div class="emoji">🏆</div>
+
           <h3>Bata seu recorde</h3>
+
           <p>
             A dificuldade aumenta conforme você avança.
           </p>
         </div>
 
       </section>
+
     </main>
 
+    <!-- RODAPÉ -->
     <footer>
-      <p>© LC GameWorks — Jogos independentes</p>
+
+      <p>
+        © LC GameWorks — Jogos independentes
+      </p>
+
       <a
         href="https://www.instagram.com/lc_gameworks/"
         target="_blank"
@@ -340,38 +350,9 @@
       >
         📸 Siga no Instagram
       </a>
+
     </footer>
+
   </div>
-
-  <script>
-    const playStoreUrl =
-      "https://play.google.com/store/apps/details?id=com.lcgameworks.naoexploda";
-
-    document.getElementById("copyButton")
-      .addEventListener("click", async () => {
-        const status =
-          document.getElementById("copyStatus");
-
-        try {
-          await navigator.clipboard.writeText(playStoreUrl);
-          status.textContent =
-            "✅ Link copiado! Abra no Chrome para acessar.";
-        } catch (error) {
-          status.textContent =
-            "Não foi possível copiar automaticamente. " +
-            "Copie o endereço abaixo.";
-
-          const link = document.createElement("a");
-          link.href = playStoreUrl;
-          link.textContent = playStoreUrl;
-          link.style.color = "#ffcb43";
-          link.style.overflowWrap = "anywhere";
-          status.appendChild(
-            document.createElement("br")
-          );
-          status.appendChild(link);
-        }
-      });
-  </script>
 </body>
 </html>
